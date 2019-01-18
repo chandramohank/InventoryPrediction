@@ -1,0 +1,63 @@
+{  
+    "appStatus":200,
+    "count":0,
+    "status":0,
+    "data":[  
+       {  
+          "StartDate":"2019-01-17T09:00:00",
+          "HoldTime":"05:00:00",
+          "TaskName":"Heating",
+          "PrepTime":"00:30:00",
+          "ItemName":"COOKED CHK",
+          "UOMName":"Whole Bird",
+          "UseByTime":"2019-01-17T14:30:00",
+          "BuildToQuantity":10,
+          "LocationName":"kitchen-east"
+       },
+       {  
+          "StartDate":"2019-01-17T14:00:00",
+          "HoldTime":"05:00:00",
+          "TaskName":"Heating",
+          "PrepTime":"00:30:00",
+          "ItemName":"COOKED CHK",
+          "UOMName":"Whole Bird",
+          "UseByTime":"2019-01-17T19:30:00",
+          "BuildToQuantity":10,
+          "LocationName":"kitchen-east"
+       },
+       {  
+          "StartDate":"2019-01-17T19:00:00",
+          "HoldTime":"05:00:00",
+          "TaskName":"Heating",
+          "PrepTime":"00:30:00",
+          "ItemName":"COOKED CHK",
+          "UOMName":"Whole Bird",
+          "UseByTime":"2019-01-18T00:30:00",
+          "BuildToQuantity":10,
+          "LocationName":"kitchen-east"
+       },
+       {  
+          "StartDate":"2019-01-18T00:00:00",
+          "HoldTime":"05:00:00",
+          "TaskName":"Heating",
+          "PrepTime":"00:30:00",
+          "ItemName":"COOKED CHK",
+          "UOMName":"Whole Bird",
+          "UseByTime":"2019-01-18T05:30:00",
+          "BuildToQuantity":10,
+          "LocationName":"kitchen-east"
+       },
+       {  
+          "StartDate":"2019-01-18T05:00:00",
+          "HoldTime":"05:00:00",
+          "TaskName":"Heating",
+          "PrepTime":"00:30:00",
+          "ItemName":"COOKED CHK",
+          "UOMName":"Whole Bird",
+          "UseByTime":"2019-01-18T10:30:00",
+          "BuildToQuantity":10,
+          "LocationName":"kitchen-east"
+       }
+    ],
+    "type":"J"
+ }

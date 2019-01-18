@@ -1,0 +1,56 @@
+<!-- <div class="row"> -->
+<!-- 
+    <nb-tabset fullWidth>
+      <nb-tab>
+        <nb-card>
+          <nb-card-header>
+            Smart Table
+          </nb-card-header>
+        
+          <nb-card-body>
+            <ng2-smart-table [settings]="settings" [source]="source">
+            </ng2-smart-table>
+          </nb-card-body>
+        </nb-card>
+        
+      </nb-tab>
+    </nb-tabset> -->
+         
+        <nb-card size="large" >
+            <nb-tabset>
+                <nb-tab tabTitle="Planned Acivities">
+              <table class="table table-bigboy">
+                  <thead ng2-st-thead>
+                  <tr class="ng2-smart-titles ng-star-inserted" ng2-st-thead-titles-row>
+                  <th class="ng2-smart-th id ng-star-inserted">Location Name</th>
+                  <th class="ng2-smart-th id ng-star-inserted">Start Date</th>
+                  <th class="ng2-smart-th id ng-star-inserted">Hold Time</th>
+                  <th class="ng2-smart-th id ng-star-inserted">Task Name</th>
+                  <th class="ng2-smart-th id ng-star-inserted">Prep Time</th>
+                  <th class="ng2-smart-th id ng-star-inserted">Item Name</th>
+                  <th class="ng2-smart-th id ng-star-inserted">UOM Name</th>
+                  <th class="ng2-smart-th id ng-star-inserted">Use By Time</th>
+                  <th class="ng2-smart-th id ng-star-inserted">Build To Quantity </th>
+                  </tr>
+                  </thead>
+                  <tbody _ngcontent-c19 ng2-st-tbody _nghost-c20>
+                      <tr class="ng2-smart-titles ng-star-inserted" *ngFor="let lineItem of lineItems">
+                        <td class="ng-star-inserted">{{lineItem.LocationName}}</td>
+                        <td class="ng-star-inserted">{{lineItem.StartDate}}</td>
+                        <td class="ng-star-inserted">{{lineItem.HoldTime}}</td>
+                        <td class="ng-star-inserted">{{lineItem.TaskName}}</td>
+                        <td class="ng-star-inserted">{{lineItem.PrepTime}}</td>
+                        <td class="ng-star-inserted">{{lineItem.ItemName}}</td>
+                        <td class="ng-star-inserted">{{lineItem.UOMName}}</td>
+                        <td class="ng-star-inserted">{{lineItem.UseByTime}}</td>
+                        <td class="ng-star-inserted">{{lineItem.BuildToQuantity}}</td>                    
+                      </tr>
+                  </tbody>
+                  </table>
+                  </nb-tab>
+            <nb-tab tabTitle="Completed Acivities"></nb-tab> 
+                  </nb-tabset>
+        </nb-card>
+          <!-- </nb-card-body>
+        </nb-card> -->
+<!-- </div>  -->
