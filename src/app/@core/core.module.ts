@@ -7,6 +7,9 @@ import { of as observableOf } from 'rxjs';
 import { throwIfAlreadyLoaded } from './module-import-guard';
 import { DataModule } from './data/data.module';
 import { AnalyticsService } from './utils/analytics.service';
+import {
+  LayoutService,
+} from './utils/layout.service';
 
 const socialLinks = [
   {
@@ -71,6 +74,7 @@ export const NB_CORE_PROVIDERS = [
     provide: NbRoleProvider, useClass: NbSimpleRoleProvider,
   },
   AnalyticsService,
+  LayoutService,
 ];
 
 @NgModule({
