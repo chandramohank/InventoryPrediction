@@ -2,6 +2,37 @@
     <nb-tabset fullWidth>
       <nb-tab tabTitle="Inventory">
         <div class="chart-container">
+            <!-- <div class="chart-header">
+                <div class="dropdown"
+                [ngClass]="{ 'ghost-dropdown': currentTheme === 'corporate' }"
+                ngbDropdown>
+             <button type="button" ngbDropdownToggle class="btn"
+                     [ngClass]="{ 'btn-outline-success': currentTheme == 'default', 'btn-primary': currentTheme != 'default'}">
+               {{ type }}
+             </button>
+             <ul class="dropdown-menu" ngbDropdownMenu>
+               <li class="dropdown-item" *ngFor="let t of types" (click)="type = t">{{ t }}</li>
+             </ul>
+            </div>
+
+            <div class="input-group">
+                <div class="dropdown input-group-prepend input-group-btn" ngbDropdown>
+                  <button type="button" class="btn btn-success dropdown-toggle" ngbDropdownToggle>
+                    Action
+                  </button>
+                  <ul class="dropdown-menu" ngbDropdownMenu>
+                    <li class="dropdown-item">Action</li>
+                    <li class="dropdown-item">Another action</li>
+                    <li class="dropdown-item">Something else here</li>
+                    <div role="separator" class="dropdown-divider"></div>
+                    <li class="dropdown-item">Separated link</li>
+                  </ul>
+                </div>
+                <input type="text" class="form-control">
+              </div>
+
+
+            </div>   -->
           <ngx-inventory-chart #inventoryChart [inventoryChartData]="inventoryChartData"></ngx-inventory-chart>
         </div>
       </nb-tab>      

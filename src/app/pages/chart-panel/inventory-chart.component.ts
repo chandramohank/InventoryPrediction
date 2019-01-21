@@ -51,7 +51,8 @@ export class InventoryChartComponent implements AfterViewInit, OnDestroy, OnChan
   async getOrdersChartData(period: string) {
     //this.inventoryChartData= this.inventoryChartService.getInventoryChartData(period);
     //this.inventoryChartData=await this.inventoryChartService.getDataForWeekPeriod();
-    this.inventoryChartData=await this.inventoryChartService.getFullData();
+    //this.inventoryChartData=await this.inventoryChartService.getFullData();
+    this.inventoryChartData=await this.inventoryChartService.get2YearsData();
   }
 
   ngAfterViewInit(): void {
@@ -277,14 +278,15 @@ export class InventoryChartComponent implements AfterViewInit, OnDestroy, OnChan
     }
     updateOrdersChartOptions(inventoryChartData : InventoryChart) {
       const options = this.option;
-      const series =[{type: "line",data:inventoryChartData.linesData}];//  this.getNewSeries(options.series, inventoryChartData.linesData);
+      const series =[
+        {name:"Actual ", type: "line",data:inventoryChartData.linesData},
+        {name:"Predicted ",type: "line",data:inventoryChartData.lines2Data,itemStyle: {color:'green'}},
+
+      ];//  this.getNewSeries(options.series, inventoryChartData.linesData);
       const xAxis = this.getNewXAxis(options.xAxis, this.inventoryChartData.chartLabel);
 
-      this.option = {
-        ...options,
-        xAxis,
-        series,
-      };
+      this.option.series=series;
+      this.option.xAxis=xAxis;
     }
     getNewSeries(series, linesData: number[]) {
       return series.map((line) => {

@@ -30,7 +30,8 @@ export class InventoryChartService extends InventoryChartData {
  
  public async getBuData(inv_id:any){ 
   return await this.getInventoryDataJSON().then(data => {
-        this.inventoryData=this.csvToJSON(data,null);
+        this.inventoryData=this.csvToJSON(data,null).filter(
+          data => data.inventory_item_id === "1000144");
        });      
  }
 
@@ -91,6 +92,24 @@ export class InventoryChartService extends InventoryChartData {
    linesData: buData.map(x=>x.sales_qty)
  }
 }
+
+public async get2YearsData() {
+  await this.getBuData("1000144");
+ //var splitData=this.csvToJSON(this.inventoryData,null);
+ var Year20162017 = this.inventoryData.filter(
+   data => data.inventory_item_id === "1000144" && new Date(data.business_date)>=new Date("2016-06-13") && new Date(data.business_date)<=new Date("2017-06-13") );
+
+   var Year20172018 = this.inventoryData.filter(
+    data => data.inventory_item_id === "1000144" && new Date(data.business_date)>=new Date("2017-06-13") && new Date(data.business_date)<=new Date("2018-06-13") );
+
+ return {
+   chartLabel: Year20172018.map(a=>a.business_date),
+   linesData: Year20172018.map(x=>x.sales_qty),
+   lines2Data:Year20162017.map(x=>x.sales_qty),
+ }
+}
+
+
 
 //  private getDataForPlot(): InventoryChart {
 //    var buData=this.getBuData(1000144);
