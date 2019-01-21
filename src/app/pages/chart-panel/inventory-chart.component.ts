@@ -52,7 +52,8 @@ export class InventoryChartComponent implements AfterViewInit, OnDestroy, OnChan
     //this.inventoryChartData= this.inventoryChartService.getInventoryChartData(period);
     //this.inventoryChartData=await this.inventoryChartService.getDataForWeekPeriod();
     //this.inventoryChartData=await this.inventoryChartService.getFullData();
-    this.inventoryChartData=await this.inventoryChartService.get2YearsData();
+    //this.inventoryChartData=await this.inventoryChartService.get2YearsData();
+    this.inventoryChartData=await this.inventoryChartService.get2MonthsData();
   }
 
   ngAfterViewInit(): void {
